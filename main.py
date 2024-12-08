@@ -1,12 +1,17 @@
+import os
 import streamlit as st
+from dotenv import load_dotenv
 from few_shot import FewShotPosts
+from langchain_groq import ChatGroq
 from post_generator import generate_post
 
+
+load_dotenv()
+llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama3-70b-8192")
 
 ## Posts length and language types 
 length_options = ["Short", "Medium", "Long"]
 language_options = ["English", "Hinglish"]
-
 
 def main():
     st.subheader("LinkedIn Post Generator: Testing")
