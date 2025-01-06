@@ -35,7 +35,6 @@ class FewShotPosts:
     def get_tags(self):
         return self.unique_tags
 
-
 if __name__ == "__main__":
     fs = FewShotPosts()
     print(fs.get_tags())
