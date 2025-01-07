@@ -5,6 +5,7 @@ from few_shot import FewShotPosts
 from langchain_groq import ChatGroq
 from post_generator import generate_post
 
+## Loading environment
 load_dotenv()
 llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama3-70b-8192")
 
